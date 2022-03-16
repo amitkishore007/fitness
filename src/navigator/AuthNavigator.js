@@ -6,7 +6,10 @@ const AuthStack = createNativeStackNavigator();
 
 export const AuthNavigator = () => {
   return (
-    <AuthStack.Navigator initialRouteName='login'>
+    <AuthStack.Navigator initialRouteName='login' screenOptions={{ 
+      gestureEnabled: true,
+      gestureDirection: "horizontal",
+      headerShown: true, }}>
         <AuthStack.Screen name='login' component={LoginScreen}/>
         <AuthStack.Screen name='signup' component={SignupScreen}/>
         <AuthStack.Screen name='forgotPassword' component={ForgotPasswordScreen}/>
