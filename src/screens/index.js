@@ -12,3 +12,6 @@ export { VerifyPhoneScreen } from './Auth/VerifyPhone';
 
 /* Init App Screens */
 export { WelcomeScreen } from './InitApp/Welcome';
+
+/* onBoarding Screens */
+export {OnBoardingScreen} from './Onboarding/OnBoarding';

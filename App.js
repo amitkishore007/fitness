@@ -25,6 +25,12 @@ const config = {
 export const theme = extendTheme({ config });
 // const Stack = createNativeStackNavigator();
 
+const NBConfig = {
+  dependencies: {
+    "linear-gradient": require("react-native-linear-gradient").default,
+  },
+};
+
 export default function App() {
   return (
     <NavigationContainer>

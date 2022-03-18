@@ -9,7 +9,7 @@ export const AuthNavigator = () => {
     <AuthStack.Navigator initialRouteName='login' screenOptions={{ 
       gestureEnabled: true,
       gestureDirection: "horizontal",
-      headerShown: true, }}>
+      headerShown: false, }}>
         <AuthStack.Screen name='login' component={LoginScreen}/>
         <AuthStack.Screen name='signup' component={SignupScreen}/>
         <AuthStack.Screen name='forgotPassword' component={ForgotPasswordScreen}/>

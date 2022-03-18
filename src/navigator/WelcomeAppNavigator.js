@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { WelcomeScreen } from '../screens';
+import { WelcomeScreen, OnBoardingScreen } from '../screens';
 
 const WelcomeAppStack = createNativeStackNavigator();
 
@@ -14,6 +14,7 @@ export const WelcomeAppNavigator = () => {
             animation: 'slide_from_right'
           }}>
             <WelcomeAppStack.Screen name='welcome' component={WelcomeScreen}/>
+            <WelcomeAppStack.Screen name='onboarding' component={OnBoardingScreen}/>
         </WelcomeAppStack.Navigator>
     )
 }
