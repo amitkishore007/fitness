@@ -15,3 +15,6 @@ export { WelcomeScreen } from './InitApp/Welcome';
 
 /* onBoarding Screens */
 export {OnBoardingScreen} from './Onboarding/OnBoarding';
+
+/* User Step Screen */
+export { UserStepScreen } from './UserStep/UserStep';

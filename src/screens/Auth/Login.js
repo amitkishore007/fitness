@@ -1,18 +1,10 @@
 import React from 'react'
-import { Center,Stack,InputLeftAddon,InputRightAddon, InputGroup,Input,Box, Image, VStack, Button, HStack, Text, Pressable } from 'native-base'
+import { Center,Stack,Input,Box, Image, VStack, Button, HStack, Text, Pressable } from 'native-base'
+import { NBPressable } from '../../components';
 
 export const LoginScreen = (props) => {
 
   const { navigate } = props.navigation;
-  const signupLink = () => {
-    return <Pressable onPress={() => navigate('signup')}>
-        {({ isHovered,
-    isFocused,
-    isPressed}) => {
-            return <Text color={isPressed ? "primary.200" : isHovered ? "primary.200" : "primary.800"} fontWeight="bold">Sign Up</Text>
-        }}
-    </Pressable>
-}
   return (
     <Center flex={1}>
       <VStack flex={1} width="100%" space={4}>
@@ -27,10 +19,9 @@ export const LoginScreen = (props) => {
         <Center>
           <HStack>
               <Text textAlign="center">Don't have an accoount? </Text> 
-            {signupLink()} 
+              <NBPressable onClick={() => navigate('signup')}  pressedColor="primary.200" hoveredColor="primary.200" defaultColor="primary.800" title="Sign up" />
           </HStack>
         </Center>
-          
       </VStack>
     </Center>
   )
