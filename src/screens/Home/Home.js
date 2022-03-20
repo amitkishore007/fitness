@@ -1,14 +1,14 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import { Button } from 'native-base';
+import { Box, Button, Center } from 'native-base';
 
 export const HomeScreen = (props) => {
   const { navigate } = props.navigation;
   return (
-    <View style={styles.container}>
+    <Center flex={1} bg="coolGray.400">
       <Text>HomeScreen</Text>
-      <Button onPress={() => navigate('WelcomeRoute')}>Go To</Button>
-    </View>
+      <Center ><Button onPress={() => navigate('WelcomeRoute')}>Go To</Button></Center>
+    </Center>
   )
 }
 

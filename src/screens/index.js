@@ -17,4 +17,4 @@ export { WelcomeScreen } from './InitApp/Welcome';
 export {OnBoardingScreen} from './Onboarding/OnBoarding';
 
 /* User Step Screen */
-export { UserStepScreen } from './UserStep/UserStep';
+export { UserTypeScreen } from './UserStep/UserType';

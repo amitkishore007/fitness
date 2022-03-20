@@ -8,7 +8,8 @@ export const HomeNavigator = () => {
     return (
         <HomeStack.Navigator initialRouteName='home' screenOptions={{
             gestureEnabled: true,
-            gestureDirection: "horizontal"
+            gestureDirection: "horizontal",
+            headerShown: false
           }}>
             <HomeStack.Screen name='home' component={HomeScreen}/>
         </HomeStack.Navigator>

@@ -14,7 +14,7 @@ import {
 } from "native-base";
 import NativeBaseIcon from "./components/NativeBaseIcon";
 import { NavigationContainer } from '@react-navigation/native';
-import {AppNavigation} from "./src/navigator";
+import {StackNavigation} from "./src/navigator";
 // Define the config
 const config = {
   useSystemColorMode: false,
@@ -38,7 +38,7 @@ export default function App() {
        {/* <Stack.Navigator initialRouteName="home">
           <Stack.Screen name='home' component={HomeScreen}/>
         </Stack.Navigator> */}
-        <AppNavigation />
+        <StackNavigation />
         {/* <Center
           _dark={{ bg: "blueGray.900" }}
           _light={{ bg: "blueGray.50" }}

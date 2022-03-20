@@ -13,7 +13,7 @@ export const LoginScreen = (props) => {
         </Stack>
        <Stack h="35%" w="100%" alignItems="center" space={4}>
           <Input w={{ base: "70%",  md: "100%" }} fontSize="sm" placeholder="Mobile Number" />
-          <Box w="70%"><Button onPress={() => {}} shadow={2} size="lg" colorScheme="primary" _text={{fontSize: "sm", letterSpacing: 1}}>Login</Button></Box>
+          <Box w="70%"><Button onPress={() => navigate('HomeRoute')} shadow={2} size="lg" colorScheme="primary" _text={{fontSize: "sm", letterSpacing: 1}}>Login</Button></Box>
        </Stack>
 
         <Center>

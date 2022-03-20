@@ -19,7 +19,7 @@ export const VerifyPhoneScreen = (props) => {
             <Input w={{ base: "15%",  md: "100%" }} fontSize="sm" textAlign="center" placeholder="X" />
             <Input w={{ base: "15%",  md: "100%" }} fontSize="sm" textAlign="center" placeholder="X" /> */}
           </HStack>
-          <Box w="70%"><Button onPress={() => navigate('verifyPhone')} shadow={2} size="lg" colorScheme="primary" _text={{fontSize: "sm", letterSpacing: 1}}>Verify OTP</Button></Box>
+          <Box w="70%"><Button onPress={() => navigate('UserStepRoute')} shadow={2} size="lg" colorScheme="primary" _text={{fontSize: "sm", letterSpacing: 1}}>Verify OTP</Button></Box>
           <Center>
           <HStack>
               <Text textAlign="center">Did not receive OTP? </Text> 
