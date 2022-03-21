@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeScreen } from '../screens';
+import { HomeScreen, NotificationScreen, ProfileScreen, SettingsScreen, TrainingScreen } from '../screens';
 import { BlurView } from 'expo-blur';
 import { StyleSheet } from 'react-native';
 import { AntICon, MatICon, FAICon, FA5ICon, MatComICon } from '../components';
@@ -9,14 +9,14 @@ const Tab = createBottomTabNavigator();
 
 export const BottomTabNavigator = () => {
   return (
-      <Tab.Navigator initialRouteName='home' screenOptions={{ tabBarStyle:{ position: 'absolute', paddingBottom: 5, paddingTop: 5,   marginBottom: 15, width: '80%', borderRadius: 25, marginLeft: '10%' }, tabBarBackground: () => (
+      <Tab.Navigator initialRouteName='home' screenOptions={{ tabBarStyle:{ position: 'absolute'  , paddingBottom: 5, paddingTop: 5, height: 50,   marginBottom: 15, width: '80%', borderRadius: 25, marginLeft: '10%' }, tabBarBackground: () => (
         <BlurView tint="dark" intensity={100} style={{...StyleSheet.absoluteFill, borderRadius: 25}} />
       ) }}>
-        <Tab.Screen name="Home" component={HomeScreen} options={{  tabBarShowLabel: false , tabBarIcon: ({ color, size }) => <AntICon name="home" color={color} size={size} /> }}/>
-        <Tab.Screen name="Home4" component={HomeScreen} options={{ tabBarShowLabel: false ,tabBarIcon: ({ size, color }) => <MatICon name="notifications-none" color={color} size={size} /> }}/>
-        <Tab.Screen name="Home5" component={HomeScreen} options={{ tabBarShowLabel: false ,tabBarIcon: ({ size, color }) => <MatComICon name="dumbbell" color={color} size={size} /> }}/>
-        <Tab.Screen name="Home1" component={HomeScreen} options={{ tabBarShowLabel: false ,tabBarIcon: ({ color, size }) => <AntICon name="setting" color={color} size={size} /> }}/>
-        <Tab.Screen name="Home3" component={HomeScreen} options={{ tabBarShowLabel: false ,tabBarIcon: ({ size, color }) => <FA5ICon name="user" color={color} size={size} /> }}/>
+        <Tab.Screen name="Home" component={HomeScreen} options={{  tabBarItemStyle:{padding: 2}, tabBarIconStyle:{},  tabBarLabelStyle:{}, tabBarLabel:'Home', tabBarShowLabel: true, tabBarIcon: ({ color, size }) => <AntICon name="home" color={color} size={22} /> }}/>
+        <Tab.Screen name="Notification" component={NotificationScreen} options={{ tabBarItemStyle:{padding: 2}, tabBarIconStyle:{},  tabBarLabelStyle:{}, tabBarLabel:'Notification', tabBarShowLabel: true ,tabBarIcon: ({ size, color }) => <MatICon name="notifications-none" color={color} size={22} /> }}/>
+        <Tab.Screen name="Training" component={TrainingScreen} options={{ tabBarItemStyle:{padding: 2}, tabBarIconStyle:{},  tabBarLabelStyle:{}, tabBarLabel:'Training', tabBarShowLabel: true ,tabBarIcon: ({ size, color }) => <MatComICon name="dumbbell" color={color} size={22} /> }}/>
+        <Tab.Screen name="Profile" component={ProfileScreen} options={{ tabBarItemStyle:{padding: 2}, tabBarIconStyle:{},  tabBarLabelStyle:{}, tabBarLabel:'Profile', tabBarShowLabel: true ,tabBarIcon: ({ size, color }) => <FAICon name="user-o" color={color} size={22} /> }}/>
+        <Tab.Screen name="Setting" component={SettingsScreen} options={{ tabBarItemStyle:{padding: 2}, tabBarIconStyle:{},  tabBarLabelStyle:{}, tabBarLabel:'Settings', tabBarShowLabel: true ,tabBarIcon: ({ color, size }) => <AntICon name="setting" color={color} size={22} /> }}/>
       </Tab.Navigator>
   );
 }
